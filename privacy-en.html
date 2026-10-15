@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="referrer" content="no-referrer">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; base-uri 'none'; form-action 'none'">
+<title>TalkTrim Privacy Policy</title>
+<style>:root{color-scheme:light dark;--ink:#202629;--muted:#57656b;--paper:#fbfcfc;
+--line:#d9e1e1;--accent:#176b68}
+@media(prefers-color-scheme:dark){:root{--ink:#e6ebed;--muted:#adb9be;
+--paper:#171c1f;--line:#394347;--accent:#81cfca}}
+*{box-sizing:border-box}html{scroll-behavior:auto}body{margin:0;background:var(--paper);
+color:var(--ink);font:17px/1.85 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+overflow-wrap:anywhere}header,main,footer{max-width:800px;margin:auto;padding:24px}
+header{border-bottom:1px solid var(--line);display:flex;justify-content:space-between;
+gap:20px;align-items:center;flex-wrap:wrap}nav{display:flex;flex-wrap:wrap;gap:18px}
+.brand{font-weight:650;letter-spacing:.02em}a{color:var(--accent);text-underline-offset:4px}
+a:focus-visible{outline:3px solid var(--accent);outline-offset:5px;border-radius:2px}
+main{padding-top:36px;padding-bottom:40px}h1{font-size:clamp(26px,5vw,36px);line-height:1.3;
+margin:0 0 28px;letter-spacing:-.025em}h2{font-size:21px;line-height:1.5;margin:36px 0 14px}
+p{margin:0 0 20px}ul{padding-left:24px}li{margin-bottom:16px}code{font-family:ui-monospace,monospace;
+font-size:.9em}footer{font-size:14px;color:var(--muted);border-top:1px solid var(--line)}
+.skip{position:absolute;left:16px;top:-80px;background:var(--paper);padding:8px}
+.skip:focus{top:8px}@media(max-width:480px){header,main,footer{padding:20px}body{font-size:16px}}</style>
+</head>
+<body>
+<a class="skip" href="#content">Skip to content</a>
+<header><span class="brand">TalkTrim</span><nav aria-label="Page navigation">
+<a href="privacy-en.html">Privacy Policy</a><a href="support-en.html">Support</a>
+<a href="privacy-zh.html" lang="zh-Hans">中文</a></nav></header>
+<main id="content"><article data-source-sha256="53fa2a7e03a227661c0f07eec053548fe1f576572964f46d1cc36035ea5c88ed">
+<h1>TalkTrim Privacy Policy</h1>
+<p>Effective date: October 15, 2026.</p>
+<p>Operator: Zhaolu Wang (individual developer)</p>
+<p>Support and privacy contact: <a rel="noreferrer" href="mailto:6666699999@live.com">6666699999@live.com</a></p>
+<h2>Scope</h2>
+<p>This policy applies to TalkTrim for macOS. The app imports supported Final Cut Pro FCPXML projects, prepares rough-cut suggestions for your review, and exports a new FCPXML project. No TalkTrim account is required.</p>
+<h2>Projects, media, and local storage</h2>
+<p>When you select an FCPXML file and its referenced media, TalkTrim parses the project, reads existing captions, and analyzes audio on your Mac. Original video, audio, and complete FCPXML files are not uploaded as AI request content; caption text and the derived information described below are sent when you approve generation. Derived projects are exported to a location you choose without overwriting the source project.</p>
+<p>The app stores ordinary preferences, model and service-address settings, file-access bookmarks, a recent-project locator, suggestion histories and review decisions, run summaries, and regenerable audio-analysis caches locally. History includes content-related information such as suggestion reasons and should not be treated as anonymous. Project history has no fixed automatic expiry. At most five recent run summaries are retained; that limit does not apply to project suggestion history. The app does not guarantee a fixed cache-clearing interval, and the operating system may clear caches.</p>
+<h2>Third-party AI, service addresses, and transmitted data</h2>
+<p>Production AI rough cuts use the DeepSeek interface. Its default address is <code>https://api.deepseek.com</code>, with generation requests sent to <code>/chat/completions</code> under that address. You can change the service address in model management in Settings. Requests to the default official address go to DeepSeek&#x27;s official service. With a custom address, the request and authentication API key go to that address&#x27;s operator, which may forward them to other services. A custom address does not establish that the service is operated by DeepSeek. Confirm its recipients, storage location, and handling rules with that operator.</p>
+<p>Generation requests contain caption text and caption identifiers; selected audio pause, silence, and boundary summaries, including pause/silence flags, candidate-boundary distance, and confidence; editing intensity; output language; task instructions; and model and request-control parameters. One generation can involve parallel requests, chunks, and retries, with some content sent repeatedly. This generation path does not send media files, file paths, file-access bookmarks, or complete project XML as request fields. Personal information written inside captions, such as names, is still sent with those captions. Send only content you are authorized to process, and obtain any necessary authorization for other people&#x27;s personal data beforehand. Connections also expose network information needed for communication, such as your IP address; server-side logging depends on the service&#x27;s rules.</p>
+<p>The app asks you to approve data sharing before each generation. Declining prevents that generation from sending AI requests and does not delete existing projects, suggestions, or exports. Local features that do not require AI remain available, including Caption Segmentation when its applicable access requirements are met. A new generation requires new approval. Declining generation does not disable other network functions, such as connection tests, model refreshes you initiate, or Apple store functions.</p>
+<p>Connection tests and model refreshes in Settings contact the configured service. The connection test in ordinary AI settings reads the model list. Connection validation in model management may also send synthetic test instructions and model parameters, without project captions. If you test another model service, credentials and test content are sent to that service&#x27;s configured address; this does not switch production rough cuts to that service.</p>
+<h2>API keys</h2>
+<p>Your API key is stored in macOS Keychain. Ordinary configuration stores a credential reference. The app reads the key into memory for requests, and the DeepSeek interface authenticates through an <code>Authorization: Bearer</code> header over HTTPS. A custom address also receives this authentication key. The key is not a TalkTrim account, and the app does not persist plaintext keys in project history or ordinary preferences. Deleting a local key does not revoke it on the provider&#x27;s platform or guarantee that a request already started stops immediately. Third-party usage charges are separate from the TalkTrim purchase.</p>
+<h2>Third-party rules and data already sent</h2>
+<p>Read the <a rel="noreferrer" href="https://cdn.deepseek.com/policies/en-US/deepseek-open-platform-terms-of-service.html">DeepSeek Open Platform Terms of Service</a> and <a rel="noreferrer" href="https://cdn.deepseek.com/policies/en-US/deepseek-privacy-policy.html">DeepSeek Privacy Policy</a>. They do not replace this app&#x27;s explanation of its own processing. Official materials describe training and technology-improvement uses and opt-out choices, but we have not confirmed how these apply to specific API inputs/outputs. We have not verified a fixed retention period, a no-training commitment, or a per-request deletion guarantee covering all TalkTrim API requests, and make no such promises. DeepSeek&#x27;s official policy describes processing and storage of relevant personal data in China. Confirm the scope applicable to your API content, and any custom service&#x27;s data location, with the relevant operator.</p>
+<p>TalkTrim has no feature for remotely deleting third-party requests. For personal data already sent to the official service, you can submit a rights request to <code>privacy@deepseek.com</code>; API-related assistance is available through <code>api-service@deepseek.com</code>. Requests may require identity verification and are subject to applicable law and technical conditions. These are request channels, not confirmation of completed deletion. Contact the operator of a custom service about its copies. You may also contact us through the privacy channel above about TalkTrim&#x27;s processing or assistance you need. Cancelling generation, deleting local caches, or uninstalling the app does not automatically recall transmitted content.</p>
+<h2>Apple store</h2>
+<p>Apple handles App Store payments. TalkTrim uses StoreKit product information and verified trial/purchase facts to determine access for the 14-day trial and one-time Full Unlock, and stores necessary trial-time checkpoints in local Keychain. The app has no custom payment server and does not receive your Apple account password or payment card number. Apple&#x27;s services are separately subject to its <a rel="noreferrer" href="https://www.apple.com/legal/privacy/">Privacy Policy</a>.</p>
+<h2>Deletion, withdrawal, and contact</h2>
+<p>You can choose “Delete API Key” in Settings → AI &amp; Models to remove the corresponding local credential. “Reset to Defaults” restores ordinary preferences and default AI configuration; it does not clear project histories, file bookmarks, audio caches, or Keychain keys. Model management allows deletion of additional service accounts and their corresponding local credentials. The production DeepSeek account itself is protected; its key can still be removed through the dedicated action above.</p>
+<p>You manage and delete source projects, media, and exported files through Finder or other file-management tools. The app currently has no control to erase all local data or delete individual suggestion-history entries. To remove local app state or caches, first quit the app and contact the privacy channel for manual guidance appropriate to your installation. Resetting preferences or only moving the app to the Trash should not be treated as deleting all data. Keychain items, backups, and third-party copies require separate handling; the app does not promise to clear them automatically.</p>
+<p>The app&#x27;s current privacy manifest declares no tracking, and the app does not implement its own analytics-upload or advertising service. This does not mean that no third party processes data. If you contact us, the contact details, issue description, and attachments you supply enter your chosen support channel. Avoid sending keys, private media, or unredacted captions. Support data is managed under a rule of retention for 90 days after the issue is resolved, except for applicable legal obligations and unresolved disputes. The developer manages this manually; no automatic cleanup mechanism exists. This does not confirm that any deletion has occurred or guarantee complete deletion of email-provider backups. You can ask about your data or request deletion through the email above.</p>
+<p>For access, correction, deletion, withdrawal, or other personal-data rights requests, use the privacy contact above. Requests are handled under applicable law; the outcome for third-party copies depends on the relevant service&#x27;s response. When this policy changes, we will update its public page and date. Changes involving new transmissions or purposes must be explained before use and obtain any authorization required by law.</p>
+<h2>Public pages and website visits</h2>
+<p>The public pages are hosted on GitHub Pages. GitHub logs and stores visitor IP addresses for security purposes, whether or not visitors are signed in. This page uses no advertising, third-party analytics scripts, or cookies set by the page itself, collects no form submissions, and creates no user database. The host still processes visit data under its own rules. Specific retention periods have not been verified. Any cookies set by the platform depend on its rules and actual responses. See the <a rel="noreferrer" href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub Privacy Statement</a>. Email providers may also process messages and backups under their rules; we cannot guarantee deletion of their copies.</p>
+</article></main>
+<footer>Operator: Zhaolu Wang (individual developer)</footer>
+</body>
+</html>

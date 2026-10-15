@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="referrer" content="no-referrer">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; base-uri 'none'; form-action 'none'">
+<title>TalkTrim Support</title>
+<style>:root{color-scheme:light dark;--ink:#202629;--muted:#57656b;--paper:#fbfcfc;
+--line:#d9e1e1;--accent:#176b68}
+@media(prefers-color-scheme:dark){:root{--ink:#e6ebed;--muted:#adb9be;
+--paper:#171c1f;--line:#394347;--accent:#81cfca}}
+*{box-sizing:border-box}html{scroll-behavior:auto}body{margin:0;background:var(--paper);
+color:var(--ink);font:17px/1.85 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+overflow-wrap:anywhere}header,main,footer{max-width:800px;margin:auto;padding:24px}
+header{border-bottom:1px solid var(--line);display:flex;justify-content:space-between;
+gap:20px;align-items:center;flex-wrap:wrap}nav{display:flex;flex-wrap:wrap;gap:18px}
+.brand{font-weight:650;letter-spacing:.02em}a{color:var(--accent);text-underline-offset:4px}
+a:focus-visible{outline:3px solid var(--accent);outline-offset:5px;border-radius:2px}
+main{padding-top:36px;padding-bottom:40px}h1{font-size:clamp(26px,5vw,36px);line-height:1.3;
+margin:0 0 28px;letter-spacing:-.025em}h2{font-size:21px;line-height:1.5;margin:36px 0 14px}
+p{margin:0 0 20px}ul{padding-left:24px}li{margin-bottom:16px}code{font-family:ui-monospace,monospace;
+font-size:.9em}footer{font-size:14px;color:var(--muted);border-top:1px solid var(--line)}
+.skip{position:absolute;left:16px;top:-80px;background:var(--paper);padding:8px}
+.skip:focus{top:8px}@media(max-width:480px){header,main,footer{padding:20px}body{font-size:16px}}</style>
+</head>
+<body>
+<a class="skip" href="#content">Skip to content</a>
+<header><span class="brand">TalkTrim</span><nav aria-label="Page navigation">
+<a href="privacy-en.html">Privacy Policy</a><a href="support-en.html">Support</a>
+<a href="support-zh.html" lang="zh-Hans">中文</a></nav></header>
+<main id="content"><article data-source-sha256="602e7f88e8930afb83275fee0cbc4a025a058d82f8d0d58f64eaba1ff7453ec1">
+<h1>TalkTrim Support</h1>
+<p>Operator: Zhaolu Wang (individual developer)</p>
+<p>Support and privacy contact: <a rel="noreferrer" href="mailto:6666699999@live.com">6666699999@live.com</a></p>
+<h2>Supported use</h2>
+<p>TalkTrim is a macOS app for preparing reviewable Final Cut Pro spoken-word rough-cut suggestions. It requires macOS 14.0 or later. TalkTrim 1.0 currently supports FCPXML 1.14 exported from Final Cut Pro, with one Project, one Primary Storyline, one main spoken-word video with its own audio, and corresponding existing captions. It does not turn arbitrary video imports into automatic completed edits and does not perform speech recognition. Caption Segmentation is a separate local feature for existing captions; it does not call AI or automatically decide what content to delete.</p>
+<h2>AI and connections</h2>
+<p>Production rough cuts use the DeepSeek interface and an API key you configure. The default service address is <code>https://api.deepseek.com</code>. A custom address&#x27;s operator receives requests and authentication keys and may forward them; confirm its identity and rules first. Third-party AI charges are separate from TalkTrim charges.</p>
+<p>Each generation requires approval to send caption text, caption identifiers, selected pause/silence/boundary summaries, editing preferences, and task parameters. One generation may involve parallel requests, chunks, and retries. Original video/audio is not uploaded as AI request content. Declining prevents that generation from sending; it does not delete local imports, existing results, or features that do not require AI. Other features remain subject to their own access requirements.</p>
+<p>The connection test in ordinary AI settings reads the model list. Connection validation in model management may also send synthetic test content. Refreshing models and testing other accounts contact their configured addresses with authentication information. These actions are separate from generation approval. A successful connection does not verify editing quality.</p>
+<p>If a connection fails, check the service address, network, API key validity, and provider account balance. Do not send your key to support. Share only the app&#x27;s sanitized error code, rather than a provider&#x27;s raw response.</p>
+<h2>Deletion and privacy requests</h2>
+<ul>
+<li>Remove the local production AI key through Settings → AI &amp; Models → Delete API Key. Revocation on the provider&#x27;s platform is separate. Deleting the key does not guarantee that requests already started stop.</li>
+<li>Reset to Defaults restores ordinary preferences and default AI configuration. It does not delete project history, bookmarks, caches, or Keychain keys.</li>
+<li>Additional service accounts can be deleted in model management. The production DeepSeek account is protected; use the dedicated action to remove its key.</li>
+<li>Manage source projects, media, and exports through Finder or similar tools. The app has no control to erase all local data or delete individual history entries. For manual removal of app state/caches, first quit the app and contact the privacy channel for guidance appropriate to your installation. Uninstalling does not establish that all data, Keychain items, or backups have been cleared.</li>
+<li>For personal data already sent to DeepSeek&#x27;s official service, submit rights requests to <code>privacy@deepseek.com</code>; API assistance is available at <code>api-service@deepseek.com</code>. For custom services, contact their operators. TalkTrim cannot remotely delete these copies and does not guarantee that a request will be granted or deletion completed.</li>
+</ul>
+<h2>Trial and purchase support</h2>
+<p>TalkTrim offers a 14-day full-feature trial and a one-time Full Unlock, with no subscription or auto-renewal. Apple handles purchases and restoration. For store issues, provide the displayed error code and contact support. Do not send Apple passwords, payment-card details, or complete transaction credentials.</p>
+<h2>What to include when contacting us</h2>
+<p>Provide the TalkTrim, macOS, and Final Cut Pro versions, the steps that failed, and sanitized error codes. Redact personal information, project names, file paths, and account details from screenshots. Do not send API keys, passwords, private media, complete captions, or unredacted FCPXML. If a sample is needed, first agree on content rights and the minimum material required. Support correspondence enters your chosen support channel.</p>
+<p>Support data is managed under a rule of retention for 90 days after the issue is resolved, except for applicable legal obligations and unresolved disputes. The developer manages this manually, without automatic cleanup. This does not confirm any completed deletion or guarantee complete deletion of email-provider backups. Ask about your data or request deletion through the email above. We do not promise a fixed response time.</p>
+</article></main>
+<footer>Operator: Zhaolu Wang (individual developer)</footer>
+</body>
+</html>
