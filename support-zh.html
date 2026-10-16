@@ -29,16 +29,18 @@ font-size:.9em}footer{font-size:14px;color:var(--muted);border-top:1px solid var
 <header><span class="brand">智剪 TalkTrim</span><nav aria-label="页面导航">
 <a href="privacy-zh.html">隐私政策</a><a href="support-zh.html">支持</a>
 <a href="support-en.html" lang="en">English</a></nav></header>
-<main id="content"><article data-source-sha256="edc72a4aaa7e5552d8b94b71cff849c060a720fd4ef8496438bf08b907e77ea1">
+<main id="content"><article data-source-sha256="47ca38bd00808cc568c9329434deebae18a51c381fc7ae6860049b4f84ff608c">
 <h1>智剪 TalkTrim 支持</h1>
+<p>最近更新：2026年10月16日。</p>
 <p>运营主体：王召露（个人开发者）</p>
 <p>支持及隐私联系：<a rel="noreferrer" href="mailto:6666699999@live.com">6666699999@live.com</a></p>
 <h2>支持范围</h2>
 <p>TalkTrim 是 macOS 应用，用于整理可审核的 Final Cut Pro 口播粗剪建议。需要 macOS 14.0 或更高版本；TalkTrim 1.0 当前支持 Final Cut Pro 导出的 FCPXML 1.14、单 Project、单 Primary Storyline、一条自带音频的主要口播视频及对应的已有字幕。不支持任意视频直接导入后全自动剪辑，不提供自动语音识别。字幕分段是处理已有字幕的独立本机功能，不调用 AI，也不自动决定删除内容。</p>
 <h2>AI 与连接</h2>
-<p>正式粗剪使用 DeepSeek 接口及你自行配置的 API Key。默认服务地址是 <code>https://api.deepseek.com</code>；自定义地址的运营者会收到请求和认证密钥，可能继续转发，请先核实其身份和规则。第三方 AI 费用独立于 TalkTrim 费用。</p>
+<p>第三方 AI 模型服务由你自行配置，服务费用独立于 TalkTrim 费用。大模型管理可添加不同服务账户、HTTPS 地址、模型 ID 和 API Key，并按已实现的能力测试连接或发现模型；部分服务须手动输入模型 ID。配置、发现或连接成功不表示该服务已支持正式粗剪。</p>
+<p>当前正式粗剪仍使用默认生产连接的 DeepSeek 协议调用路径，默认地址为 <code>https://api.deepseek.com</code>。可修改该生产地址并在其可用目录中选择模型；新增账户不会自动成为生产账户，也不会切换生产密钥或协议。修改地址后，其他服务能否满足现有请求/响应和剪辑要求仍须实际验证，不能保证任意兼容接口或模型可用。实际地址的运营者会收到该操作的请求和认证密钥，并可能继续转发；请核实其身份、条款和数据规则。</p>
 <p>每次生成需要确认发送字幕文字、字幕标识、选定的停顿/静音/边界摘要、剪辑偏好与任务参数。一次生成可能有并行请求、分块和重试。原始视频/音频不作为 AI 请求上传。拒绝会阻止该次生成发送；本机导入、已有结果以及不依赖 AI 的功能不会因此被删除。其他功能仍受各自使用权限限制。</p>
-<p>普通 AI 设置的连接测试读取模型列表；大模型管理中的连接验证还可能发送合成测试内容。刷新模型和测试其他账户会联系对应配置地址，并发送认证信息；这些主动操作与生成授权分开。连接成功不等于剪辑质量已验证。</p>
+<p>普通 AI 设置的连接测试使用生产连接读取模型列表；大模型管理中的连接验证还可能发送合成测试内容。刷新模型和测试其他账户会联系对应配置地址，并按协议发送认证信息；这些主动操作与生成授权分开，也不会切换生产连接。连接成功只提供接口层面的证据，不表示该账户已可用于正式粗剪或剪辑质量已经验证。</p>
 <p>连接失败时，先检查服务地址、网络、API Key 是否有效及第三方账户余额。不要把密钥发给支持人员。只分享应用显示的脱敏错误代码；不要直接转发第三方原始响应。</p>
 <h2>删除与隐私请求</h2>
 <ul>
